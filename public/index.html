@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>Call Him Now</title></head>
+<body>
+  <h1>Click to Call</h1>
+  <button onclick="notify()">📞 Call Him Now</button>
+  <script>
+    async function notify() {
+      const res = await fetch("/notify");
+      const msg = await res.text();
+      alert(msg);
+    }
+  </script>
+</body>
+</html>
